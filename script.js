@@ -1,6 +1,11 @@
 //your code here
 
-let touristSpots = ['The Virupaksha Temple', 'Victoria Memorial', 'Tajmahal'];
+function ArticleRemove(bandnames){
+	let Modifiedbandnames = bandnames.map(name => {
+		return name.replace(/^(a | an | the)/i,")
+	});
+	}
 
-let MtouristSpots = touristSpots.replace(/^(a | an | the)/i,");
-  console.log(MtouristSpots);										 
+  Modifiedbandnames.sort();
+console.log( Modifiedbandnames);
+}
