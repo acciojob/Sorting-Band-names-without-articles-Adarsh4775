@@ -2,7 +2,7 @@
 
 function ArticleRemove(bandnames){
 	let Modifiedbandnames = bandnames.map(name => {
-		return name.replace(/^(a | an | the)/i,")
+		return name.replace(/^(a | an | the)/i,"").trim()
 	});
 	}
 
