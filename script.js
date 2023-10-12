@@ -1,11 +1,17 @@
 //your code here
 
-function ArticleRemove(bandnames){
-	let Modifiedbandnames = bandnames.map(name => {
-		return name.replace(/^(a | an | the)/i,"").trim()
-	});
-	}
+function ArticleRemove(str){
+	str=str.replace(/^(a | an | the)/i,"");
 
-  Modifiedbandnames.sort();
-console.log( Modifiedbandnames);
+
+	touristSpots.sort((a,b)=>
+		stripArticle(a).localeCompare(stripArticle(b)));
+
+	let ul = document.getElementById("band");
+	touristSpots.forEach(spot =>{
+	let li = document.createElement("li");
+	li.textContent=spot;
+	ul.appendChild(li);
+});
 }
+	
